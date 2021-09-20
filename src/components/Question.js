@@ -36,7 +36,7 @@ const Question = ({
     <div className="outer">
       <div className="inner">
         <p className="logo">a prime</p>
-        {data.question.split("n").map((line) => {
+        {data.question.split("N").map((line) => {
           return (
             <span className="question">
               {line}

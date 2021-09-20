@@ -4,7 +4,7 @@
 }
 @font-face {
   font-family: "title2";
-  src: url("fonts/IM_Hyemin-Regular.ttf");
+  src: url("fonts/아리따-돋움\(TTF\)-Bold.ttf");
 }
 @font-face {
   font-family: "logo";
@@ -28,7 +28,7 @@
   font-family: "logo";
   font-size: 30px;
   padding-top: 50px;
-  padding-bottom: 140px;
+  padding-bottom: 100px;
 }
 
 .question {
@@ -51,6 +51,7 @@
   font-family: "title2";
   font-size: 20px;
   font-weight: 800;
+  line-height: 120%;
   cursor: pointer;
 }
 
