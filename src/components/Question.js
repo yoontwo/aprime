@@ -41,6 +41,8 @@ const Question = ({
       onAnswerUpdate((prevState) => [
         ...prevState.slice(0, prevState.length - 1),
       ]);
+    } else {
+      onSetStep(1);
     }
   };
 
