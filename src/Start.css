@@ -1,0 +1,48 @@
+@font-face {
+  font-family: "title";
+  src: url("fonts/NanumBarunpenR.ttf");
+}
+@font-face {
+  font-family: "title2";
+  src: url("fonts/IM_Hyemin-Regular.ttf");
+}
+@font-face {
+  font-family: "logo";
+  src: url("fonts/Urbanist-ExtraLight.ttf");
+}
+.div {
+  text-align: center;
+}
+
+.div_start {
+  display: inline-block;
+}
+
+.logo_letter {
+  font-family: "logo";
+  font-size: 30px;
+  padding-top: 50px;
+  padding-bottom: 200px;
+}
+.Title {
+  font-family: "title";
+  font-size: 30px;
+}
+
+.start_img {
+  width: 200px;
+}
+
+.body {
+  font-family: "title2";
+  font-size: 20px;
+}
+
+.start_button {
+  background-color: white;
+  border: 3;
+  width: 210px;
+  height: 40px;
+  font-family: "title";
+  font-size: 17px;
+}

@@ -111,10 +111,12 @@ const Loading = ({ setStep, Answers }) => {
     }
   };
   return (
-    <div className="start">
-      <button className="start_button" onClick={quizFinishHandler}>
-        결과 확인
-      </button>
+    <div className="outer">
+      <div className="inner">
+        <button className="resultButton" onClick={quizFinishHandler}>
+          결과 확인
+        </button>
+      </div>
     </div>
   );
 };

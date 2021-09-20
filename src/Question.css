@@ -1,0 +1,53 @@
+@font-face {
+  font-family: "title";
+  src: url("fonts/NanumBarunpenR.ttf");
+}
+@font-face {
+  font-family: "title2";
+  src: url("fonts/IM_Hyemin-Regular.ttf");
+}
+@font-face {
+  font-family: "logo";
+  src: url("fonts/Urbanist-ExtraLight.ttf");
+}
+.outer {
+  text-align: center;
+}
+
+.inner {
+  display: inline-block;
+}
+
+.logo {
+  font-family: "logo";
+  font-size: 30px;
+  padding-top: 50px;
+  padding-bottom: 180px;
+}
+
+.question {
+  display: flex;
+  width: 380px;
+  font-family: "title2";
+  font-size: 23px;
+  font-weight: bolder;
+  text-align: left;
+  line-height: 150%;
+  padding-bottom: 50px;
+}
+
+.button {
+  background-color: white;
+  margin-right: 30px;
+  width: 300px;
+  height: 60px;
+  font-family: "title2";
+  font-size: 17px;
+  border: 3;
+}
+
+.footer {
+  padding-top: 100px;
+  font-family: "title";
+  font-size: 25px;
+}
