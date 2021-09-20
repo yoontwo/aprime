@@ -11,6 +11,12 @@
   src: url("fonts/Urbanist-ExtraLight.ttf");
 }
 .outer {
+  /* min-height: 100vh;
+  height: 100%;
+  background-image: url("components/img/배경화면1.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat; */
   text-align: center;
 }
 
@@ -29,25 +35,28 @@
   display: flex;
   width: 380px;
   font-family: "title2";
-  font-size: 23px;
-  font-weight: bolder;
+  font-size: 30px;
+  font-weight: 1000;
   text-align: left;
   line-height: 150%;
   padding-bottom: 50px;
+  /* color: #5e454b; */
 }
 
 .button {
-  background-color: white;
+  background-color: #f7d59c;
   margin-right: 30px;
   width: 300px;
   height: 60px;
   font-family: "title2";
   font-size: 17px;
   border: 3;
+  cursor: pointer;
 }
 
 .footer {
   padding-top: 100px;
   font-family: "title";
   font-size: 25px;
+  color: #5e454b;
 }

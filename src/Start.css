@@ -11,22 +11,30 @@
   src: url("fonts/Urbanist-ExtraLight.ttf");
 }
 .div {
+  /* min-height: 100vh;
+  height: 100%;
+  background-image: url("components/img/배경화면1.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat; */
   text-align: center;
 }
 
 .div_start {
+  width: 50%;
   display: inline-block;
 }
 
-.logo_letter {
+.logo {
   font-family: "logo";
   font-size: 30px;
   padding-top: 50px;
-  padding-bottom: 200px;
+  padding-bottom: 150px;
 }
-.Title {
+.startTitle {
   font-family: "title";
   font-size: 30px;
+  /* color: #5e454b; */
 }
 
 .start_img {
@@ -45,4 +53,5 @@
   height: 40px;
   font-family: "title";
   font-size: 17px;
+  cursor: pointer;
 }
