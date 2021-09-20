@@ -2,6 +2,15 @@ import React, { useState, useEffect, useRef } from "react";
 import { Button as GrommetButton, Box } from "grommet";
 import "../Question.css";
 
+export var ProgressBar = ({ width, percent }) => {
+  let progress = 0.01 * percent * width;
+
+  return (
+    <div className="progress-div" style={{ width: width }}>
+      <div style={{ width: `${progress}px` }} className="progress" />
+    </div>
+  );
+};
 const Question = ({
   Finish,
   data,
@@ -12,6 +21,8 @@ const Question = ({
   onSetActiveQuestion,
   onSetStep,
 }) => {
+  const [percent, setPercent] = useState(0);
+
   const mobileWidth = 500;
   React.useEffect(() => {
     const onResize = () => {
@@ -23,8 +34,19 @@ const Question = ({
     return () => window.removeEventListener("resize", onResize);
   }, []);
 
+  const prevClickHandler = () => {
+    if (activeQuestion > 0) {
+      onSetActiveQuestion(activeQuestion - 1);
+      setPercent(percent - 100 / 11);
+      onAnswerUpdate((prevState) => [
+        ...prevState.slice(0, prevState.length - 1),
+      ]);
+    }
+  };
+
   const nextClickHandler = (i) => {
     onAnswerUpdate((prevState) => [...prevState, i]);
+    setPercent(percent + 100 / 11);
     if (activeQuestion < numberOfQuestions - 1) {
       onSetActiveQuestion(activeQuestion + 1);
     } else {
@@ -36,24 +58,23 @@ const Question = ({
     <div className="outer">
       <div className="inner">
         <p className="logo">a prime</p>
+        <button className="prevButton" onClick={() => prevClickHandler()}>
+          이전
+        </button>
         {data.question.split("N").map((line) => {
-          return (
-            <span className="question">
-              {line}
-              <br />
-              <br />
-            </span>
-          );
+          return <span className="question">{line}</span>;
         })}
-        <p>{onAnswerUpdate}</p>
+        {/* <p>{onAnswerUpdate}</p> */}
         {data.choices.map((choice, i) => (
-          <ul>
+          <div className={`button_${i}`}>
             <button className="button" onClick={() => nextClickHandler(i)}>
               {choice}
             </button>
-          </ul>
+          </div>
         ))}
-        <p className="footer">{data.footer}</p>
+
+        <ProgressBar className="footer" width={400} percent={percent} />
+        {/* <p className="footer">{data.footer}</p> */}
       </div>
     </div>
   );
