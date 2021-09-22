@@ -4,11 +4,11 @@
 }
 @font-face {
   font-family: "title2";
-  src: url("fonts/아리따-돋움\(TTF\)-Bold.ttf");
+  src: url("fonts/IM_Hyemin-Regular.ttf");
 }
 @font-face {
   font-family: "answer";
-  src: url("fonts/아리따-돋움\(TTF\)-Medium.ttf");
+  src: url("fonts/IM_Hyemin-Regular.ttf");
 }
 @font-face {
   font-family: "logo";
@@ -22,6 +22,7 @@
   background-position: center center;
   background-repeat: no-repeat; */
   text-align: center;
+  position: relative;
 }
 
 .inner {
@@ -46,33 +47,18 @@
   /* padding-bottom: 50px; */
   /* color: #5e454b; */
 }
-.button_0 {
+.btn_0 {
   position: absolute;
-  background-color: #f7d59c;
-  top: 45%;
-  width: 350px;
-  height: 80px;
-  font-family: "title2";
-  font-size: 20px;
-  line-height: 120%;
-  cursor: pointer;
+  top: 400px;
+  bottom: 0;
 }
-.button_1 {
+.btn_1 {
   position: absolute;
-  background-color: #f7d59c;
-  bottom: 38%;
-  width: 350px;
-  height: 80px;
-  margin-top: 120px;
-  font-family: "title2";
-  font-size: 20px;
-  line-height: 120%;
-  cursor: pointer;
+  top: 500px;
+  /* margin-top: 120px; */
 }
 .button {
-  /* position: fixed; */
   background-color: #f7d59c;
-  /* margin-right: 30px; */
   width: 350px;
   height: 80px;
   font-family: "title2";
@@ -105,8 +91,8 @@
 
 .progress {
   position: absolute;
-  bottom: 270px;
+  top: 700px;
   background-color: #5e454b;
-  height: 18px;
+  height: 10px;
   border-radius: 1rem;
 }

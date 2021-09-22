@@ -66,9 +66,8 @@ const Question = ({
         {data.question.split("N").map((line) => {
           return <span className="question">{line}</span>;
         })}
-        {/* <p>{onAnswerUpdate}</p> */}
         {data.choices.map((choice, i) => (
-          <div className={`button_${i}`}>
+          <div className={`btn_${i}`}>
             <button className="button" onClick={() => nextClickHandler(i)}>
               {choice}
             </button>
@@ -76,7 +75,6 @@ const Question = ({
         ))}
 
         <ProgressBar className="footer" width={400} percent={percent} />
-        {/* <p className="footer">{data.footer}</p> */}
       </div>
     </div>
   );
