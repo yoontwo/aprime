@@ -15,12 +15,29 @@
   src: url("fonts/Urbanist-ExtraLight.ttf");
 }
 .outer {
-  /* min-height: 100vh;
+  background-color: #d0f8ec;
+  /* min-width: 100vw; */
+  min-height: 100vh;
   height: 100%;
-  background-image: url("components/img/배경화면1.jpg");
+  /* background-image: url("components/img/07.png"); */
+  background-attachment: fixed;
   background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat; */
+  /* background-position: center; */
+  background-repeat: no-repeat;
+  text-align: center;
+  position: relative;
+}
+
+.outer::after {
+  background-color: #d0f8ec;
+  /* min-width: 100vw; */
+  min-height: 100vh;
+  height: 100%;
+  /* background-image: url("components/img/07.png"); */
+  background-attachment: fixed;
+  background-size: cover;
+  /* background-position: center; */
+  background-repeat: no-repeat;
   text-align: center;
   position: relative;
 }

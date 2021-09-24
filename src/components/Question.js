@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Button as GrommetButton, Box } from "grommet";
 import "../Question.css";
 
 export var ProgressBar = ({ width, percent }) => {
@@ -73,7 +72,9 @@ const Question = ({
             </button>
           </div>
         ))}
-
+        {/* {data.footer.map((line) => (
+          <p className="question">{line}</p>
+        ))} */}
         <ProgressBar className="footer" width={400} percent={percent} />
       </div>
     </div>
