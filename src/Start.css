@@ -1,6 +1,6 @@
 @font-face {
   font-family: "title";
-  src: url("fonts/NanumBarunpenR.ttf");
+  src: url("fonts/SeoulHangangB.ttf");
 }
 @font-face {
   font-family: "title2";
@@ -32,8 +32,9 @@
   padding-bottom: 150px;
 }
 .startTitle {
-  font-family: "title";
+  font-family: "title2";
   font-size: 30px;
+
   /* color: #5e454b; */
 }
 
@@ -47,11 +48,14 @@
 }
 
 .start_button {
-  background-color: white;
-  border: 3;
-  width: 210px;
-  height: 40px;
+  background-color: #81d8d0;
+  border: 0;
+  /* border-color: wheat; */
+  width: 270px;
+  height: 70px;
   font-family: "title";
-  font-size: 17px;
+  font-size: 23px;
+  color: white;
   cursor: pointer;
+  border-radius: 20px;
 }

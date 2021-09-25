@@ -18,7 +18,12 @@ const Start = ({ onQuizStart }) => {
     <div className="div">
       <div calssName="div_start">
         <p className="logo">a prime</p>
-        <h1 className="startTitle">나에게 딱 맞는 클린뷰티 제품은?</h1>
+        <h1 className="startTitle">
+          나에게 딱 맞는 <br />
+          클린뷰티 제품은?
+          <br />
+          <br />
+        </h1>
         <p>클린뷰티에 대한 간단한 설명추가하기</p>
         <img className="start_img" src={require("./img/start.png").default} />
         <p className="body">테스트 후 응모하면 상품까지!!</p>

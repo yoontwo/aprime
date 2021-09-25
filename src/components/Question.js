@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import "../Question.css";
+import { TiArrowLeft } from "react-icons/ti";
 
 export var ProgressBar = ({ width, percent }) => {
   let progress = 0.01 * percent * width;
@@ -20,7 +21,7 @@ const Question = ({
   onSetActiveQuestion,
   onSetStep,
 }) => {
-  const [percent, setPercent] = useState(0);
+  const [percent, setPercent] = useState(100 / 12);
 
   const mobileWidth = 500;
   React.useEffect(() => {
@@ -47,7 +48,7 @@ const Question = ({
 
   const nextClickHandler = (i) => {
     onAnswerUpdate((prevState) => [...prevState, i]);
-    setPercent(percent + 100 / 11);
+    setPercent(percent + 100 / 12);
     if (activeQuestion < numberOfQuestions - 1) {
       onSetActiveQuestion(activeQuestion + 1);
     } else {
@@ -60,6 +61,7 @@ const Question = ({
       <div className="inner">
         <p className="logo">a prime</p>
         <button className="prevButton" onClick={() => prevClickHandler()}>
+          <TiArrowLeft className="back" />
           이전
         </button>
         {data.question.split("N").map((line) => {
