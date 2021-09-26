@@ -77,7 +77,7 @@ const Question = ({
         {/* {data.footer.map((line) => (
           <p className="question">{line}</p>
         ))} */}
-        <ProgressBar className="footer" width={400} percent={percent} />
+        <ProgressBar className="footer" width={350} percent={percent} />
       </div>
     </div>
   );
