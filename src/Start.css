@@ -1,9 +1,5 @@
 @font-face {
   font-family: "title";
-  src: url("fonts/SeoulHangangB.ttf");
-}
-@font-face {
-  font-family: "title2";
   src: url("fonts/IM_Hyemin-Regular.ttf");
 }
 @font-face {
@@ -33,28 +29,18 @@
   padding-bottom: 150px;
 }
 .startTitle {
-  font-family: "title2";
+  font-family: "title";
   font-size: 1.8em;
-  z-index: 2;
+
   /* color: #5e454b; */
 }
 
 .start_img {
   width: 200px;
-  /* max-width: none;
-  max-height: 100%;
-  min-width: 100%;
-  min-height: 100%;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translateX(-50%) translateY(-50%);
-  z-index: 1; */
 }
 
 .body {
-  font-family: "title2";
+  font-family: "title";
   font-size: 1em;
 }
 
@@ -76,8 +62,29 @@
   font-size: 23px;
   text-shadow: 0px 0px 1rem yellow;
   transition: 1s;
-  z-index: 2;
 }
-/* .start_str:hover {
-  text-shadow: 0 0 0.1em, 0 0 0.3em yellow;
-} */
+
+.earth_img {
+  width: 22px;
+  height: 22px;
+  padding-top: 20px;
+  padding-left: 10px;
+}
+.smile_img {
+  width: 22px;
+  height: 22px;
+  padding-top: 20px;
+  padding-right: 10px;
+}
+
+.clean {
+  font-family: "title";
+  font-size: 20px;
+}
+
+.clean2_class {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* padding-left: 41%; */
+}

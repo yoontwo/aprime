@@ -21,9 +21,20 @@ const Start = ({ onQuizStart }) => {
         <h1 className="startTitle">"클린뷰티란"</h1>
         <br />
         <br />
+        <span className="clean2_class">
+          <img className="smile_img" src={require("./img/smile.png").default} />
+          <p className="clean">피부에도 좋고</p>
+        </span>
+
+        <span className="clean2_class">
+          <p className="clean">지구에도 좋고</p>
+          <img className="earth_img" src={require("./img/earth.png").default} />
+        </span>
+
+        <p className="clean">내일을 위한 선택지. a prime</p>
 
         <button className="start_button" onClick={onQuizStart}>
-          <p className="start_str">내 인생템 찾으러 가기</p>
+          <p className="start_str">시작하기</p>
         </button>
       </div>
     </div>

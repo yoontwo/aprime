@@ -4,35 +4,17 @@
 } */
 @font-face {
   font-family: "title2";
-  src: url("fonts/Cafe24Dongdong.ttf");
+  src: url("fonts/IM_Hyemin-Bold.ttf");
 }
 @font-face {
   font-family: "answer";
-  src: url("fonts/IM_Hyemin-Regular.ttf");
+  src: url("fonts/IM_Hyemin-Bold.ttf");
 }
 @font-face {
   font-family: "logo";
   src: url("fonts/Urbanist-ExtraLight.ttf");
 }
-.outer {
-  background: linear-gradient(to bottom, #ffecd2, #fcb69f);
-  height: 100vh;
-  /* background-attachment: fixed; */
-  background-size: cover;
-  background-repeat: no-repeat;
-  text-align: center;
-  position: relative;
-  animation: slide 1s ease-in-out 0s 1 normal forwards;
-}
 
-/* .outer::after {
-  height: 100%;
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
-  text-align: center;
-  position: relative;
-} */
 @keyframes slide {
   from {
     transform: translateX(100%);
@@ -42,10 +24,19 @@
   }
 }
 
+.outer {
+  background: linear-gradient(to bottom, #ffecd2, #fcb69f);
+  height: calc(var(--vh, 1vh) * 100);
+  /* background-attachment: fixed; */
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  position: relative;
+  animation: slide 1s ease-in-out 0s 1 normal forwards;
+}
+
 .inner {
   height: 100%;
-  /* background-color: #d0f8ec; */
-  /* height: 100%; */
   display: inline-block;
 }
 
@@ -93,7 +84,6 @@
   font-family: "answer";
   text-align: left;
   font-size: 20px;
-  font-weight: 800;
   line-height: 150%;
   cursor: pointer;
   border-radius: 20px;
@@ -106,7 +96,7 @@
 .prevButton {
   position: absolute;
   background-color: rgba(0, 0, 0, 0);
-  margin-top: 525px;
+  top: 720px;
   margin-left: -205px;
   width: 100px;
   height: 40px;

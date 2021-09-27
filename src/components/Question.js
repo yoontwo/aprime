@@ -42,13 +42,11 @@ const Question = ({
       onAnswerUpdate((prevState) => [
         ...prevState.slice(0, prevState.length - 1),
       ]);
-    } else {
-      onSetStep(1);
     }
   };
 
   const nextClickHandler = (i) => {
-    setAnime((prev) => prev + 1);
+    // setAnime((prev) => prev + 1);
     onAnswerUpdate((prevState) => [...prevState, i]);
     setPercent(percent + 100 / 12);
     if (activeQuestion < numberOfQuestions - 1) {
@@ -58,14 +56,18 @@ const Question = ({
     }
   };
 
+  let vh = 0;
+
+  useEffect(() => {
+    vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
+  }, []);
+
   return (
     <div className="outer">
       <div className="inner">
         <p className="logo">a prime</p>
-        <button className="prevButton" onClick={() => prevClickHandler()}>
-          <TiArrowLeft className="back" />
-          이전
-        </button>
+
         {data.question.split("N").map((line) => {
           return <span className="question">{line}</span>;
         })}
@@ -80,6 +82,10 @@ const Question = ({
           <p className="question">{line}</p>
         ))} */}
         <ProgressBar className="footer" width={350} percent={percent} />
+        <button className="prevButton" onClick={() => prevClickHandler()}>
+          <TiArrowLeft />
+          이전
+        </button>
       </div>
     </div>
   );
