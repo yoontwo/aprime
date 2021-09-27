@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 
 import Start from "./components/Start";
+import CleanBeauty from "./components/cleanBeauty";
 import Question from "./components/Question";
 
 import ENFP from "./components/ENFP";
@@ -26,20 +27,26 @@ import quizData from "./data/data.json";
 
 function App() {
   const [step, setStep] = useState(1);
+  const [anime, setAnime] = useState(1);
   const [activeQuestion, setActiveQuestion] = useState(0);
   const [answers, setAnswers] = useState([]);
 
   const quizStartHandler = () => {
+    setStep(22);
+  };
+  const quizStartHandler2 = () => {
     setStep(2);
   };
 
   return (
     <div>
       {step === 1 && <Start onQuizStart={quizStartHandler} />}
+      {step === 22 && <CleanBeauty onQuizStart={quizStartHandler2} />}
       {step === 2 &&
         (console.log({ answers }),
         (
           <Question
+            setAnime={setAnime}
             data={quizData.data[activeQuestion]}
             answers={answers}
             onAnswerUpdate={setAnswers}

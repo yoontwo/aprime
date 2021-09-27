@@ -12,6 +12,7 @@ export var ProgressBar = ({ width, percent }) => {
   );
 };
 const Question = ({
+  setAnime,
   Finish,
   data,
   answers,
@@ -47,6 +48,7 @@ const Question = ({
   };
 
   const nextClickHandler = (i) => {
+    setAnime((prev) => prev + 1);
     onAnswerUpdate((prevState) => [...prevState, i]);
     setPercent(percent + 100 / 12);
     if (activeQuestion < numberOfQuestions - 1) {
